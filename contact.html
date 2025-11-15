@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Farris Estate & Law Associates</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 🔹 Navbar -->
+  <header class="navbar">
+    <div class="logo">Farris Estate & Law</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔹 Hero Banner -->
+  <section class="hero-banner small-hero">
+    <div class="hero-content">
+      <h1>Contact Us</h1>
+      <p>Get in Touch With Farris Estate & Law Associates</p>
+    </div>
+  </section>
+
+  <!-- 🔹 Contact Info + Form -->
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Our Office</h2>
+          <p><strong>Address:</strong> Talwar Chowk Sector C Behria Town, Lahore, Pakistan</p>
+          <p><strong>Phone:</strong> +92 3007003687</p>
+          <p><strong>Email:</strong> Farrislaw0000@gmail.com</p>
+          <p><strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+          
+          <h2>Our Office</h2>
+          <p><strong>Address:</strong> susan road, Faislabad, Pakistan</p>
+          <p><strong>Phone:</strong> +92 3007003687</p>
+          <p><strong>Email:</strong>Farrislaw0000@gmail.com</p>
+          <p><strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+
+          <h2>Our Office</h2>
+          <p><strong>Address:</strong> Shahkot, Lahore, Pakistan</p>
+          <p><strong>Phone:</strong> +92 306 1932304</p>
+          <p><strong>Email:</strong> Farrislaw0000@gmail.com</p>
+          <p><strong>Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+          
+          <div class="contact-socials">
+            <h3>Connect with Us</h3>
+            <a href="https://www.linkedin.com/in/ch-umair-shehzad-bajwa-5a7a69164">LinkedIn</a>
+            <a href="https://www.facebook.com/share/16fqQsNcx6/">Facebook</a>
+            <a href="https://www.instagram.com/farrislaw0000">Instagram</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <form action="https://formspree.io/f/myzlgdez" method="POST">
+  <!-- redirect after submission -->
+  <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you.html">
+
+  <label>
+    Your Name:
+    <input type="text" name="name" required>
+  </label>
+  <br><br>
+  <label>
+    Your Email:
+    <input type="email" name="email" required>
+  </label>
+  <br><br>
+  <label>
+    Your Message and Phone Number:
+    <textarea name="message" required></textarea>
+  </label>
+  <br><br>
+  <button type="submit">Send</button>
+</form>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Farris Estate & Law Associates</h3>
+        <p>Trusted legal and estate advisors with a commitment to integrity and excellence.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>Email: Farrislaw0000@gmail.com</p>
+        <p>Phone: +92 3007003687</p>
+        <p>Location:Talwar Chowk Sector C Bahria Town Lahore</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Farris Estate & Law Associates. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    padding: 10px;
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .whatsapp-float img {
+    width: 45px;
+    height: 45px;
+    display: block;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
+</style>
+<script>
+  // Intercept the form submission and redirect after successful send
+  const contactForm = document.querySelector('.contact-form form');
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // stop default navigation
+    const formData = new FormData(contactForm);
+
+    fetch(contactForm.action, {
+      method: contactForm.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        // Redirect to thank-you page after successful submission
+        window.location.href = "thank-you.html";
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    })
+    .catch(() => alert("Error sending message. Please try again later."));
+  });
+</script>
+
+</body>
+</html>
